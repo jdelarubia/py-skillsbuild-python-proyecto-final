@@ -32,8 +32,15 @@ class TestGeneration(unittest.TestCase):
             current = len(m)
             self.assertEqual(current, expected, f"length should be {expected}")
 
-    def test_two_dimensions(self):
-        m = Matrix(2)
+    def test_sum_rows(self):
+        """test sum_rows"""
+        expected = 3
+        current = self.test_matrix.sum_row(1)
+        self.assertEqual(current, expected, f"sum should be {expected}")
+        expected = 7
+        current = self.test_matrix.sum_row(2)
+        self.assertEqual(current, expected, f"sum should be {expected}")
+
         expected = 4
         current = len(m)
         self.assertEqual(current, expected, f"length should be {expected}")
