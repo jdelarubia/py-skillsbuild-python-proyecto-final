@@ -18,10 +18,10 @@ class Matrix:
         self._matrix = matrix
 
     def sum_row(self, row: int) -> int:
-        """Given a row number, return the sum of that row
+        """Return the sum of a given row number.
 
         Args:
-            row (int): row number
+            row (int): row number between 1 and self._dim
 
         Returns:
             int: sum of the elements of a row
@@ -30,10 +30,10 @@ class Matrix:
         return sum(self._matrix[row - 1])
 
     def sum_col(self, col: int) -> int:
-        """Given a column number, return the sum of that column
+        """Return the sum of a given column number.
 
         Args:
-            col (int): column number
+            col (int): column number between 1 and self._dim
         Returns:
             int: sum of the elements of a column
         """
