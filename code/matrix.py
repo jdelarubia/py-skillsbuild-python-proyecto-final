@@ -29,7 +29,7 @@ class Matrix:
         s = ""
         for row in range(self._dim):
             s += (
-                "".join(f"{self._matrix[row][col]:2d}" for col in range(self._dim))
+                "".join(f"{self._matrix[row][col]:<2d}" for col in range(self._dim))
                 + "\n"
             )
         return s
