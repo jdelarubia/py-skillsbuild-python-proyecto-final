@@ -26,4 +26,10 @@ class Matrix:
 
     def __repr__(self) -> str:
         """Return a reader-friendly string representation of the object"""
-        return f"{self.__name__}"
+        s = ""
+        for row in range(self._dim):
+            s += (
+                "".join(f"{self._matrix[row][col]:2d}" for col in range(self._dim))
+                + "\n"
+            )
+        return s
