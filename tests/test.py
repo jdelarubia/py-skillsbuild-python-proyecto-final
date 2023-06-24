@@ -12,6 +12,11 @@ class TestGeneration(unittest.TestCase):
         expected = Matrix
         self.assertIsInstance(m, expected, f"type should be {expected}")
 
+    def test_empty_matrix(self):
+        m = Matrix(0)
+        expected = 0
+        current = len(m)
+        self.assertEqual(current, expected, f"length should be {expected}")
 
     def test_single_dimension(self):
         m = Matrix(1)
