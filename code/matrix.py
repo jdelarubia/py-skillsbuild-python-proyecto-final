@@ -5,8 +5,9 @@ from random import randint
 
 
 class Matrix:
-    def __init__(self, n: int) -> None:
-        self._matrix = [[randint(0, 9) for i in range(n)] for j in range(n)]
+    def __init__(self, dim: int) -> None:
+        self._dim = dim  # matrix dimension
+        self._matrix = [[randint(0, 9) for i in range(dim)] for j in range(dim)]
 
     @property
     def matrix(self) -> list:
