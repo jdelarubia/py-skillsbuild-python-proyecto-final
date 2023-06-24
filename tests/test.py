@@ -1,8 +1,7 @@
-"""test_generate.py
+"""test_matrix.py
 """
 
 import unittest
-import code.app as app
 from code.matrix import Matrix
 
 
@@ -41,9 +40,14 @@ class TestGeneration(unittest.TestCase):
         current = self.test_matrix.sum_row(2)
         self.assertEqual(current, expected, f"sum should be {expected}")
 
+    def test_sum_columns(self):
+        """test sum_columns"""
         expected = 4
-        current = len(m)
-        self.assertEqual(current, expected, f"length should be {expected}")
+        current = self.test_matrix.sum_col(1)
+        self.assertEqual(current, expected, f"sum should be {expected}")
+        expected = 6
+        current = self.test_matrix.sum_col(2)
+        self.assertEqual(current, expected, f"sum should be {expected}")
 
 
 if __name__ == "__main__":
