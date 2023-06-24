@@ -29,6 +29,17 @@ class Matrix:
         assert row in range(1, self._dim + 1), f"row has to be < {self._dim}"
         return sum(self._matrix[row - 1])
 
+    def sum_col(self, col: int) -> int:
+        """Given a column number, return the sum of that column
+
+        Args:
+            col (int): column number
+        Returns:
+            int: sum of the elements of a column
+        """
+        assert col in range(1, self._dim + 1), f"row has to be < {self._dim}"
+        return sum([self._matrix[row][col - 1] for row in range(self._dim)])
+
     def __len__(self) -> int:
         return sum([len(line) for line in self._matrix])
 
