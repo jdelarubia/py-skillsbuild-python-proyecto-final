@@ -20,11 +20,13 @@ class TestGeneration(unittest.TestCase):
         current = len(m)
         self.assertEqual(current, expected, f"length should be {expected}")
 
-    def test_single_dimension(self):
-        m = Matrix(1)
-        expected = 1
-        current = len(m)
-        self.assertEqual(current, expected, f"length should be {expected}")
+    def test_matrix_dimension(self):
+        """len is n*n for n-dimension matrix"""
+        for dim in range(1, 7):
+            m = Matrix(dim)
+            expected = dim * dim
+            current = len(m)
+            self.assertEqual(current, expected, f"length should be {expected}")
 
     def test_two_dimensions(self):
         m = Matrix(2)
