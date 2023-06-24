@@ -9,9 +9,9 @@ from code.matrix import Matrix
 class TestGeneration(unittest.TestCase):
     def test_type(self):
         m = Matrix(0)
-        expected = str(m)
-        current = type(m)
-        self.assertEqual(current, expected, "")
+        expected = Matrix
+        self.assertIsInstance(m, expected, f"type should be {expected}")
+
 
     def test_single_dimension(self):
         m = Matrix(1)
