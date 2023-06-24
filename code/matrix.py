@@ -22,8 +22,7 @@ class Matrix:
 
     def __str__(self) -> str:
         """Return a reader-friendly string representation of our matrix"""
-        # for _ in ...
-        return f"{self.__name__}"
+        return f"{self.__class__.__name__}"
 
     def __repr__(self) -> str:
         """Return a reader-friendly string representation of the object"""
