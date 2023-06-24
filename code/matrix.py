@@ -17,6 +17,18 @@ class Matrix:
     def matrix(self, matrix: list):
         self._matrix = matrix
 
+    def sum_row(self, row: int) -> int:
+        """Given a row number, return the sum of that row
+
+        Args:
+            row (int): row number
+
+        Returns:
+            int: sum of the elements of a row
+        """
+        assert row in range(1, self._dim + 1), f"row has to be < {self._dim}"
+        return sum(self._matrix[row - 1])
+
     def __len__(self) -> int:
         return sum([len(line) for line in self._matrix])
 
