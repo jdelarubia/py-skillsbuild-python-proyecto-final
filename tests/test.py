@@ -7,6 +7,10 @@ from code.matrix import Matrix
 
 
 class TestGeneration(unittest.TestCase):
+    def setUp(self) -> None:
+        self.test_matrix = Matrix(2)
+        self.test_matrix.matrix = [[1, 2], [3, 4]]
+
     def test_type(self):
         """m is instance of Matrix"""
         m = Matrix(0)
