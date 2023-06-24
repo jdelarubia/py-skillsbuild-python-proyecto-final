@@ -8,11 +8,13 @@ from code.matrix import Matrix
 
 class TestGeneration(unittest.TestCase):
     def test_type(self):
+        """m is instance of Matrix"""
         m = Matrix(0)
         expected = Matrix
         self.assertIsInstance(m, expected, f"type should be {expected}")
 
     def test_empty_matrix(self):
+        """len is 0 for empty matrix"""
         m = Matrix(0)
         expected = 0
         current = len(m)
