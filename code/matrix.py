@@ -18,6 +18,11 @@ class Matrix:
         return sum(self._sum_rows)
 
     @property
+    def sum_all_columns(self) -> int:
+        """Suma de todas las filas"""
+        return sum(self._sum_columns)
+
+    @property
     def sum_columns(self) -> int:
         """Devuelve la lista de las sumas de todas las columnas"""
 
