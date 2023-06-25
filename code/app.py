@@ -30,6 +30,10 @@ def print_list_of_sums_all_rows(m: Matrix):
     print(f"lista de sumas de todas las filas: {m.sum_rows}")
 
 
+def print_list_of_sums_all_columns(m: Matrix):
+    print(f"lista de sumas sumas de todas las columnas: {m.sum_columns}")
+
+
 if __name__ == "__main__":
     n = 5
     # 1. Generar la matriz
@@ -55,4 +59,4 @@ if __name__ == "__main__":
     # 5. Imprime las listas de las sumas de todas las filas y todas las columnas
     print()
     print_list_of_sums_all_rows(m)
-    print(f"lista de sumas sumas de todas las columnas: {m.sum_columns}")
+    print_list_of_sums_all_columns(m)
