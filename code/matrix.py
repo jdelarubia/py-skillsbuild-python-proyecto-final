@@ -1,4 +1,5 @@
 """matrix.py
+Objeto encargado de encapsular una matriz de NxN (filas y columnas) con sus métodos.
 """
 
 from random import randint
@@ -17,14 +18,16 @@ class Matrix:
 
     @property
     def sum_columns(self) -> int:
-        return sum(self._sum_columns)
+        """Devuelve la lista de las sumas de todas las columnas"""
 
     @property
     def matrix(self) -> list:
+        """Devuelve la matriz"""
         return list(self._matrix)
 
     @matrix.setter
     def matrix(self, matrix: list):
+        """Permite asignar una matriz  nuestro objeto"""
         self._matrix = matrix
 
     def sum_row(self, row: int) -> int:
