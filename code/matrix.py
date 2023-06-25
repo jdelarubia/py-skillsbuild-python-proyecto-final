@@ -14,6 +14,7 @@ class Matrix:
 
     @property
     def sum_all_rows(self) -> int:
+        """Suma de todas las columnas"""
         return sum(self._sum_rows)
 
     @property
