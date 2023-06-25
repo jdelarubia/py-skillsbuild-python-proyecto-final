@@ -9,8 +9,8 @@ class Matrix:
     def __init__(self, dim: int) -> None:
         self._dim = dim  # matrix dimension
         self._matrix = [[randint(0, 9) for i in range(dim)] for j in range(dim)]
-        self._sum_rows = [self.sum_row(row + 1) for row in range(dim)]
-        self._sum_columns = [self.sum_col(col + 1) for col in range(dim)]
+        self._sum_rows = [self.sum_row(row + 1) for row in range(self._dim)]
+        self._sum_columns = [self.sum_col(col + 1) for col in range(self._dim)]
 
     @property
     def sum_all_rows(self) -> int:
