@@ -9,8 +9,17 @@ class Matrix:
     def __init__(self, dim: int) -> None:
         self._dim = dim  # matrix dimension
         self._matrix = [[randint(0, 9) for i in range(dim)] for j in range(dim)]
-        self._sum_rows = [self.sum_row(row + 1) for row in range(self._dim)]
-        self._sum_columns = [self.sum_col(col + 1) for col in range(self._dim)]
+        self._sum_rows = [self.sum_row(row + 1) for row in range(self.dim)]
+        self._sum_columns = [self.sum_col(col + 1) for col in range(self.dim)]
+
+    @property
+    def dim(self) -> int:
+        """Devuelve la dimensión de la matriz"""
+        return self._dim
+
+    @dim.setter
+    def dim(self, new_dim: int):
+        self._dim = new_dim
 
     @property
     def sum_all_rows(self) -> int:
@@ -42,8 +51,8 @@ class Matrix:
         """Permite asignar una matriz  nuestro objeto"""
         assert len(matrix) == len(matrix[1])
         self._matrix = matrix
-        self._sum_rows = [self.sum_row(row + 1) for row in range(self._dim)]
-        self._sum_columns = [self.sum_col(col + 1) for col in range(self._dim)]
+        self._sum_rows = [self.sum_row(row + 1) for row in range(self.dim)]
+        self._sum_columns = [self.sum_col(col + 1) for col in range(self.dim)]
 
     def sum_row(self, row: int) -> int:
         """Devuelve la suma de una fila dada.
