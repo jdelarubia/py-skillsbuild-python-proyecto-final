@@ -23,3 +23,11 @@ python -m unittest tests.test_matrix -v
 # Correr el código de ejemplo
 python code/app.py
 ```
+
+## Recursos
+
+-   [Python unittest official](https://docs.python.org/3/library/unittest.html)
+-   [A beginner's guide to Python unittest](https://www.dataquest.io/blog/unit-tests-python/)
+-   [Python random module](https://docs.python.org/3/library/random.html)
+-   [Python properties: getters and setters](https://realpython.com/python-property/)
+-   [Using the len() function in Python](https://realpython.com/len-python-function/)
