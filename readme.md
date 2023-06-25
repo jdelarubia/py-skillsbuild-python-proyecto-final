@@ -20,6 +20,6 @@ Además, se sugiere que el programa incluya manejo de excepciones en caso de que
 # Correr las pruebas
 python -m unittest tests.test_matrix -v
 
-# Correr el código d eejemplo
+# Correr el código de ejemplo
 python code/app.py
 ```
