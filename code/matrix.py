@@ -12,7 +12,7 @@ class Matrix:
         self._sum_columns = [self.sum_col(col + 1) for col in range(dim)]
 
     @property
-    def sum_rows(self) -> int:
+    def sum_all_rows(self) -> int:
         return sum(self._sum_rows)
 
     @property
