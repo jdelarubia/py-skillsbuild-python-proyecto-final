@@ -35,13 +35,13 @@ class Matrix:
         self._sum_columns = [self.sum_col(col + 1) for col in range(self._dim)]
 
     def sum_row(self, row: int) -> int:
-        """Return the sum of a given row number.
+        """Devuelve la suma de una fila dada.
 
         Args:
-            row (int): row number between 1 and self._dim
+            row (int): número de fila entre 1 y self._dim (incluido)
 
         Returns:
-            int: sum of the elements of a row
+            int: suma de los elementos de una fila dada
         """
         assert row in range(1, self._dim + 1), f"row has to be < {self._dim}"
         return sum(self._matrix[row - 1])
@@ -50,9 +50,9 @@ class Matrix:
         """Return the sum of a given column number.
 
         Args:
-            col (int): column number between 1 and self._dim
+            col (int): column number; between 1 and self._dim (included)
         Returns:
-            int: sum of the elements of a column
+            int: sum of the elements of the given column
         """
         assert col in range(1, self._dim + 1), f"row has to be < {self._dim}"
         return sum([self._matrix[row][col - 1] for row in range(self._dim)])
@@ -61,11 +61,11 @@ class Matrix:
         return sum([len(line) for line in self._matrix])
 
     def __str__(self) -> str:
-        """Return a reader-friendly string representation of our matrix"""
+        """Devuelve el tipo del objeto"""
         return f"{self.__class__.__name__}"
 
     def __repr__(self) -> str:
-        """Return a reader-friendly string representation of the object"""
+        """Devuelve una representación amigable del valor del objeto"""
         s = ""
         for row in range(self._dim):
             s += (
