@@ -1,5 +1,5 @@
 """app.py
-Sample code to test our Matrix general functionality.
+Código de ejemplo para probar la funcionalidad de la clase Matrix.
 """
 
 from matrix import Matrix
