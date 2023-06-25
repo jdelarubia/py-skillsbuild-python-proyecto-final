@@ -28,6 +28,7 @@ class Matrix:
     @matrix.setter
     def matrix(self, matrix: list):
         """Permite asignar una matriz  nuestro objeto"""
+        assert len(matrix) == len(matrix[1])
         self._matrix = matrix
 
     def sum_row(self, row: int) -> int:
