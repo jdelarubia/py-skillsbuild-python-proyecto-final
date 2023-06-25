@@ -4,6 +4,11 @@ Sample code to test our Matrix general functionality.
 
 from matrix import Matrix
 
+
+def print_matrix(m: Matrix):
+    print(f"representación de una matriz de {n}x{n}")
+    print(repr(m))
+
 if __name__ == "__main__":
     n = 5
     # 1. Generar la matriz
@@ -12,8 +17,7 @@ if __name__ == "__main__":
     m = Matrix(n)
 
     # 3. Imprime la matriz utilizando el método incorporado __repr__
-    print(f"representación de una matriz de {n}x{n}")
-    print(repr(m))
+    print_matrix(m)
 
     # 4. Imprime las sumas de filas o columnas dadas
     row = 2
