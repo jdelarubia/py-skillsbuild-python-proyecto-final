@@ -38,6 +38,12 @@ class TestGeneration(unittest.TestCase):
         current = self.test_matrix.sum_all_rows
         self.assertEqual(current, expected, f"sum should be {expected}")
 
+    def test_sum_all_columns(self):
+        """test sum_all_columns"""
+        expected = 10
+        current = self.test_matrix.sum_all_columns
+        self.assertEqual(current, expected, f"sum should be {expected}")
+
     def test_sum_rows(self):
         """test sum_rows"""
         expected = 3
