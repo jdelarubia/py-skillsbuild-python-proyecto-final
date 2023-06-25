@@ -22,6 +22,10 @@ def print_sum_all_rows(m: Matrix):
     print(f"suma de los elementos de todas las filas: {m.sum_all_rows}")
 
 
+def print_sum_all_columns(m: Matrix):
+    print(f"suma de los elementos de todas las columnas: {m.sum_all_columns}")
+
+
 if __name__ == "__main__":
     n = 5
     # 1. Generar la matriz
@@ -42,7 +46,7 @@ if __name__ == "__main__":
     # Imprime las sumas de todos los elementos de las filas y de todas los elementos de las columnas
     print()
     print_sum_all_rows(m)
-    print(f"suma de los elementos de todas las columnas: {m.sum_all_columns}")
+    print_sum_all_columns(m)
 
     # 5. Imprime las listas de las sumas de todas las filas y todas las columnas
     print()
