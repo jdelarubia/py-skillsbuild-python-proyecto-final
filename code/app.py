@@ -14,6 +14,10 @@ def print_given_row(m: Matrix, row: int = 1):
     print(f"suma de la fila {row}:", m.sum_row(row))
 
 
+def print_given_column(m: Matrix, col: int):
+    print(f"suma de la columna {col}:", m.sum_col(col))
+
+
 if __name__ == "__main__":
     n = 5
     # 1. Generar la matriz
@@ -29,7 +33,7 @@ if __name__ == "__main__":
     print_given_row(m, row)
 
     col = 3
-    print(f"suma de la columna {col}:", m.sum_col(col))
+    print_given_column(m, col)
 
     # Imprime las sumas de todos los elementos de las filas y de todas los elementos de las columnas
     print()
