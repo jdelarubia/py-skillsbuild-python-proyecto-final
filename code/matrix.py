@@ -31,6 +31,8 @@ class Matrix:
         """Permite asignar una matriz  nuestro objeto"""
         assert len(matrix) == len(matrix[1])
         self._matrix = matrix
+        self._sum_rows = [self.sum_row(row + 1) for row in range(self._dim)]
+        self._sum_columns = [self.sum_col(col + 1) for col in range(self._dim)]
 
     def sum_row(self, row: int) -> int:
         """Return the sum of a given row number.
