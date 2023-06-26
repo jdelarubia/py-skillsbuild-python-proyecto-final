@@ -45,3 +45,12 @@ python code/app.py
 -   [Python random module](https://docs.python.org/3/library/random.html)
 -   [Python properties: getters and setters](https://realpython.com/python-property/)
 -   [Using the len() function in Python](https://realpython.com/len-python-function/)
+
+---
+
+## Ideas para mejoras
+
+-   probar programación más defensiva. Comprobar tipos de los argumentos pasados a algunos métodos
+-   probar que se lanzan las excepciones correspondientes en los tests cuando pasamos valores de tipos incorrectos.
+-   probar que los valores pasados son enteros positivos o lanzar excepción
+-   permitir pasar un limite_inferior y un limite_superior a los límites de los números aleatorios a generar.
