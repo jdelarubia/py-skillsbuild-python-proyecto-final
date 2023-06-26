@@ -1,5 +1,9 @@
 # Curso Python Full Stack (IBM SkillsBuild & Bejob) Caso Práctico Final
 
+[enlace a github](https://github.com/jdelarubia/py-skillsbuild-python-proyecto-final)
+
+---
+
 ## Requerimientos
 
 Escribir un programa en Python que genere una matriz de tamaño NxN y la llene con números aleatorios entre 0 y 9. El programa deberá imprimir la matriz generada y luego calcular la suma de los elementos de cada fila y columna. Finalmente, deberá imprimir la suma de cada fila y columna.
@@ -14,6 +18,8 @@ El programa deberá incluir las siguientes características:
 
 Además, se sugiere que el programa incluya manejo de excepciones en caso de que el usuario ingrese un valor no válido para N, también que incluya comentarios para explicar el código y finalmente que se hagan los test unitarios necesarios para asegurar que el resultado es el esperado.
 
+---
+
 ## Ejecución
 
 ```bash
@@ -23,6 +29,14 @@ python -m unittest tests.test_matrix -v
 # Correr el código de ejemplo
 python code/app.py
 ```
+
+---
+
+## Resultado
+
+<img src="./resultado.png" width="800" />
+
+---
 
 ## Recursos
 
