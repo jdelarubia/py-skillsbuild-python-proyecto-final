@@ -61,5 +61,39 @@ class TestMatrixFunctionality(unittest.TestCase):
         self.assertEqual(current, expected, f"sum should be {expected}")
 
 
+class TestMatrixIntegration(unittest.TestCase):
+    def setUp(self) -> None:
+        self.test_matrix = Matrix(5)
+
+    def test_object_should_return_type_matrix(self):
+        """m is instance of Matrix"""
+        m = Matrix(0)
+        expected = Matrix
+        self.assertIsInstance(m, expected, f"type should be {expected}")
+        self.assertIsInstance(self.test_matrix, Matrix, f"type should be {expected}")
+
+    def test_sum_of_a_single_row(self):
+        """test sum_row method"""
+        row = 1
+        expected = sum(self.test_matrix.matrix[row - 1])
+        current = self.test_matrix.sum_row(row)
+        self.assertEqual(
+            current, expected, f"the sum of row {row} should be {expected}"
+        )
+
+    def test_sum_of_a_single_col(self):
+        col = 1
+        expected = sum(
+            [
+                self.test_matrix.matrix[row][col - 1]
+                for row in range(self.test_matrix.dim)
+            ]
+        )
+        current = self.test_matrix.sum_col(col)
+        self.assertEqual(
+            current, expected, f"the sum of col {col} should be {expected}"
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
