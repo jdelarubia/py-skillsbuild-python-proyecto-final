@@ -6,7 +6,7 @@ import unittest
 from code.matrix import Matrix
 
 
-class TestGeneration(unittest.TestCase):
+class TestMatrixFuncionality(unittest.TestCase):
     def setUp(self) -> None:
         self.test_matrix = Matrix(2)
         self.test_matrix.matrix = [[1, 2], [3, 4]]
