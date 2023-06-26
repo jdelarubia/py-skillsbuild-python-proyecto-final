@@ -30,18 +30,21 @@ class TestMatrixFunctionality(unittest.TestCase):
         """test sum_all_rows"""
         expected = 10
         current = self.test_matrix.sum_all_rows
+        self.assertIsInstance(current, int)
         self.assertEqual(current, expected, f"sum should be {expected}")
 
     def test_sum_of_all_columns_property(self):
         """test sum_all_columns"""
         expected = 10
         current = self.test_matrix.sum_all_columns
+        self.assertIsInstance(current, int)
         self.assertEqual(current, expected, f"sum should be {expected}")
 
     def test_sum_rows_property(self):
         """test sum_rows"""
         expected = 3
         current = self.test_matrix.sum_row(1)
+        self.assertIsInstance(current, int)
         self.assertEqual(current, expected, f"sum should be {expected}")
         expected = 7
         current = self.test_matrix.sum_row(2)
@@ -51,6 +54,7 @@ class TestMatrixFunctionality(unittest.TestCase):
         """test sum_columns"""
         expected = 4
         current = self.test_matrix.sum_col(1)
+        self.assertIsInstance(current, int)
         self.assertEqual(current, expected, f"sum should be {expected}")
         expected = 6
         current = self.test_matrix.sum_col(2)
