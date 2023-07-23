@@ -27,11 +27,12 @@ def print_sum_all_columns(m: Matrix):
 
 
 def print_list_of_sums_all_rows(m: Matrix):
-    print(f"lista de sumas de todas las filas: {m.sum_rows}")
+    print(f"lista de sumas por filas: {m.sum_rows}")
 
 
 def print_list_of_sums_all_columns(m: Matrix):
-    print(f"lista de sumas sumas de todas las columnas: {m.sum_columns}")
+    print(f"lista de sumas por columnas: {m.sum_columns}")
+
 
 
 if __name__ == "__main__":
