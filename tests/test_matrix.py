@@ -94,6 +94,10 @@ class TestMatrixIntegration(unittest.TestCase):
             current, expected, f"the sum of col {col} should be {expected}"
         )
 
+    def test_non_integer_dimension_throws_typeerror(self):
+        with self.assertRaises(TypeError):
+            Matrix("a")
+
 
 if __name__ == "__main__":
     unittest.main()
