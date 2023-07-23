@@ -61,12 +61,13 @@ if __name__ == "__main__":
     col = 3
     print_given_column(m, col)
 
-    # Imprime las sumas de todos los elementos de las filas y de todas los elementos de las columnas
-    print()
-    print_sum_all_rows(m)
-    print_sum_all_columns(m)
-
     # 5. Imprime las listas de las sumas de todas las filas y todas las columnas
     print()
     print_list_of_sums_all_rows(m)
     print_list_of_sums_all_columns(m)
+
+    # Imprime las sumas de todos los elementos de las filas y de todas los elementos de las columnas
+    # NO SE PIDE
+    # print()
+    # print_sum_all_rows(m)
+    # print_sum_all_columns(m)
