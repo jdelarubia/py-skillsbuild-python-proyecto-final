@@ -65,18 +65,18 @@ class Matrix:
             row (int): número de fila entre 1 y self._dim (incluido)
 
         Returns:
-            int: suma de los elementos de una fila dada
+            int: suma de los elementos de esa fila
         """
         assert row in range(1, self._dim + 1), f"row has to be < {self._dim}"
         return sum(self._matrix[row - 1])
 
     def sum_col(self, col: int) -> int:
-        """Return the sum of a given column number.
+        """Devuelve la suma de la columna pasada como parámetro.
 
         Args:
-            col (int): column number; between 1 and self._dim (included)
+            col (int): número de columna; entre 1 y self._dim (incluido)
         Returns:
-            int: sum of the elements of the given column
+            int: suma de los elementos de esa columna
         """
         assert col in range(1, self._dim + 1), f"row has to be < {self._dim}"
         return sum([self._matrix[row][col - 1] for row in range(self._dim)])
