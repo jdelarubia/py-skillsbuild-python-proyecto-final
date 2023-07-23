@@ -7,6 +7,10 @@ from random import randint
 
 class Matrix:
     def __init__(self, dim: int) -> None:
+        try:
+            assert isinstance(dim, int)
+        except:
+            pass
         self._dim = dim  # matrix dimension
         self._matrix = [[randint(0, 9) for i in range(dim)] for j in range(dim)]
         self._sum_rows = [self.sum_row(row + 1) for row in range(self.dim)]
