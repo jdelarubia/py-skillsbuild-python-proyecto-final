@@ -34,9 +34,18 @@ def print_list_of_sums_all_columns(m: Matrix):
     print(f"lista de sumas por columnas: {m.sum_columns}")
 
 
+def get_matrix_dimension_from_user() -> int:
+    try:
+        dim = input("Introduce la dimensión de la matriz (sólo enteros): ")
+        assert isinstance(int(dim), int)
+        assert type(int(dim)) == int
+        return int(dim)
+    except (ValueError, TypeError):
+        print("Por favor, introduce sólo números enteros")
+
 
 if __name__ == "__main__":
-    n = 5
+    n = get_matrix_dimension_from_user()
     # 1. Generar la matriz
     # 2. Rellena la matriz con números aleatorios
     # 4. Calcula las sumas de las filas y columnas
